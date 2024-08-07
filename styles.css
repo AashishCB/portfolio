@@ -9,7 +9,6 @@ header {
     background-color: rgb(30, 33, 34);
     color: white;
     text-align: center;
-    padding: 0.001em 0;
 }
 
 nav {
@@ -35,24 +34,46 @@ nav ul li a {
 }
 
 div {
-    padding: 1em;
-    background-color: #131516;
 
     h2 {
         color: #d8d4cf;
     }
 
     p {
+        margin: 15px;
         color: #d8d4cf;
     }
 
 }
 
-.about, .projects, .contact {
+.about {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    background-color: #131516;
+
+    .full_name {
+        font-size: xxx-large;
+    }
+    .personal_summary {
+        color: #d8d4cf;
+        font-family: fangsong;
+        margin: 15px;
+        font-size: 1.5em;
+    }
+}
+
+.projects{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #131516;
 }
 
 .education{
@@ -70,10 +91,11 @@ div {
     background-color: rgb(30, 33, 34)
 }
 .contact {
-    height: 20vh;
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #131516;
 }
 
 a {
