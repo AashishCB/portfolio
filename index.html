@@ -2,22 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <title>Aashish CB</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="styles.css" rel="stylesheet">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetClass = link.getAttribute('data-target');
+                    const targetSection = document.querySelector(`.${targetClass}`);
+                    targetSection.scrollIntoView({behavior: 'smooth'});
+                });
+            });
+        });
+    </script>
 </head>
 <body>
 <header>
-    <h1>Welcome Visitor</h1>
+    <h4>Welcome Visitor</h4>
+    <nav>
+        <ul>
+            <li><a class="nav-link" data-target="about" href="#">About Me</a></li>
+            <li><a class="nav-link" data-target="education" href="#">Education</a></li>
+            <li><a class="nav-link" data-target="projects" href="#">Projects</a></li>
+            <li><a class="nav-link" data-target="certifications" href="#">Certifications</a></li>
+            <li><a class="nav-link" data-target="contact" href="#">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-<section>
+<div class="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Aashish. I am software developer.</p>
-</section>
-<section>
+    <p>Hi, I'm Aashish. I am Software Developer.</p>
+</div>
+<div class="education">
     <h2>Education</h2>
     <p>M.Sc. Advanced Computer Science</p>
     <p>B.E. Computer Science and Engineering</p>
-</section>
+</div>
+<div class="projects">
+    <h2>Projects</h2>
+</div>
+<div class="certifications">
+    <h2>Certifications</h2>
+</div>
+<div class="contact">
+    <h2>Contact</h2>
+    <p>Email: aashish.2chandra@gmail.com</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/aashishcb" target="_blank">linkedin.com/in/aashishcb</a></p>
+    <p>GitHub: <a href="https://github.com/AashishCB" target="_blank">github.com/AashishCB</a></p>
+</div>
+<footer>
+    <p>&copy; 2024 Aashish Chandra Bivek</p>
+</footer>
 </body>
 </html>
